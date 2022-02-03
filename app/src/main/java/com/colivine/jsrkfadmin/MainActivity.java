@@ -5,8 +5,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public GridView gridView;
     int logos[] = {R.drawable.gallery_img,R.drawable.news_img};
     int[] menu_home ={R.string.grid_nav_gallery,R.string.grid_nav_news};
+    public Button button;
 
 
     @Override
@@ -27,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,AddMemberActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -38,4 +50,5 @@ public class MainActivity extends AppCompatActivity {
 
         //https://abhiandroid.com/ui/gridview
     }
+
 }
