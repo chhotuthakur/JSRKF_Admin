@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JSRKF Admin</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="grid_nav_gallery">Gallery</string>
+    <string name="grid_nav_news">News</string>
+</resources>
